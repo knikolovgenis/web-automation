@@ -19,15 +19,12 @@ class EbayTestCaseClass extends GebSpec {
 		ebayPage.searchBtn.click()
 		
 		and: "Filter the items from the checkbox menu"
-		i..ebayPage.checkBoxItems.size() {
-			if (it.value == "Apple AirPods Pro") {
-				it.click()
-			}
-		}
+		ebayPage.pickModelCheckBoxItem("Apple AirPods Pro")
+				
+		and: "Page is refeshed"
+		driver.navigate().refresh()
 		
-//		ebayPage.checkBoxItems[].click()
-		
-		then: "One more step"
+		then: "Then step in order execution not to fail"
 		assert true
 	}
 }
