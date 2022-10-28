@@ -29,8 +29,8 @@ System.setProperty("webdriver.chrome.driver", path + chromeDriverPath)
 System.setProperty("webdriver.firefox.driver", path + chromeDriverPath)
 
 
-//driver = { new ChromeDriver()}
-driver = { new FirefoxDriver()}
+driver = { new ChromeDriver()}
+//driver = { new FirefoxDriver()}
 
 
 environments {
